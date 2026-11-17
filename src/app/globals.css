@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-avenora-powder: #B9D7E8;
+  --color-avenora-peach: #F6B99D;
+  --color-avenora-ivory: #FFF9F4;
+  --color-avenora-slate: #263C50;
+  --color-avenora-white: #FFFFFF;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --avenora-powder: #B9D7E8;
+  --avenora-peach: #F6B99D;
+  --avenora-ivory: #FFF9F4;
+  --avenora-slate: #263C50;
+  --avenora-white: #FFFFFF;
+  background-color: var(--avenora-slate);
+  color: var(--avenora-ivory);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--avenora-slate);
+  color: var(--avenora-ivory);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #F6B99D;
+  color: #263C50;
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #263C50;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(185, 215, 232, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(246, 185, 157, 0.6);
+}
+
+/* Glassmorphism helpers */
+.glass-panel-dark {
+  background: rgba(38, 60, 80, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(185, 215, 232, 0.16);
+}
+
+.glass-panel-light {
+  background: rgba(255, 249, 244, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(38, 60, 80, 0.08);
+}
+
+.glass-pill {
+  background: rgba(255, 249, 244, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 249, 244, 0.22);
+}
+
+/* Typography styles */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+.tracking-luxury {
+  letter-spacing: 0.24em;
+}
+
+.tracking-widest-editorial {
+  letter-spacing: 0.35em;
+}
+
+/* Subtle grain overlay */
+.editorial-grain {
+  background-image: radial-gradient(rgba(246, 185, 157, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
